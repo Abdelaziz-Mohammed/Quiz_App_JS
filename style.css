@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --main-color: #001e4d;
+    --text-color: #222;
+}
+body {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+}
+.app h1 {
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.app .quiz {
+    padding: 30px 0;
+}
+.app .quiz h2 {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.app .quiz #answer-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.app .quiz #answer-btns button {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    text-indent: 10px;
+    border-radius: 6px;
+    color: var(--text-color);
+    background-color: white;
+    font-size: 16px;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.app .quiz #answer-btns button.category {
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.app .quiz #answer-btns button:hover,
+.app .quiz #answer-btns button.active {
+    color: white;
+    background-color: var(--text-color);
+}
+.app .quiz #next-btn {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 30px auto 0;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}
+/* Final Score message */
+.quiz .message {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.quiz .message span.msg {
+    display: block;
+    margin-bottom: 5px;
+}
+.quiz .message span.score {
+    display: inline-block;
+    color: green;
+    font-weight: bolder;
+}
+.quiz .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.quiz .buttons button {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    width: calc((100% - 25px) / 2);
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: var(--main-color);
+    transition: all 0.3s;
+}
+.quiz .buttons button.show-answers:hover {
+    background-color: green;
+}
+.quiz .buttons button.try-again:hover {
+    background-color: red;
+}
+.quiz #answer-btns button.correct-answer {
+    font-weight: 600;
+    background-color: #9aeabc;
+    border: none;
+}
+.quiz #answer-btns button.wrong-answer {
+    font-weight: 600;
+    background-color: #ff9393;
+    border: none;
+}
